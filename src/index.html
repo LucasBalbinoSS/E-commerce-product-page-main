@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce product page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu__interno-1 js-menu__interno-1">
+                <div class="container-menu js-container-menu esconder">
+                    <ul class="interno-1__lista js-interno-1__lista">
+                        <li><img class="menu-fechar-svg js-menu-svg-fechar" src="/images/icon-close.svg" alt="Fechar menu"></li>
+                        <li>Collections</li>
+                        <li>Men</li>
+                        <li>Women</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <img class="menu-abrir-svg js-menu-abrir-svg" src="/images/icon-menu.svg" alt="Menu">
+                <img class="logo-svg" src="/images/logo.svg" alt="Logo da loja">
+            </div>
+            <div class="menu__interno-2">
+                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
+                <img class="profile-photo" src="/images/image-avatar.png" alt="Foto de perfil">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-controlador">
+            <div class="foto-alternado">
+                <span class="container-seta container-seta-voltar js-container-seta-voltar-padrao">
+                    <img src="/images/icon-previous.svg" alt="Voltar imagem">
+                </span>
+                <div class="container-img js-container-img-padrao" data-foto-ativa="1">
+                    <img class="img-tenis img-tenis-1 js-img-tenis-padrao" src="/images/image-product-1.jpg" alt="Foto 1 do tênis">
+                    <img class="img-tenis img-tenis-2 js-img-tenis-padrao" src="/images/image-product-2.jpg" alt="Foto 2 do tênis">
+                    <img class="img-tenis img-tenis-3 js-img-tenis-padrao" src="/images/image-product-3.jpg" alt="Foto 3 do tênis">
+                    <img class="img-tenis img-tenis-4 js-img-tenis-padrao" src="/images/image-product-4.jpg" alt="Foto 4 do tênis">
+                </div>
+                <span class="container-seta container-seta-avancar js-container-seta-avancar-padrao">
+                    <img src="/images/icon-next.svg" alt="Próxima imagem">
+                </span>
+                <div class="carrosel-imagens">
+                    <div class="container-foto-escolhida">
+                        <img class="img-tenis-carrossel img-tenis-carrossel-1 js-img-tenis-carrossel-padrao" src="/images/image-product-1.jpg" alt="Foto 1 do tênis" data-foto-carrossel-ativa="1">
+                        <span class="foto-escolhida"></span>
+                    </div>
+                    <div class="container-foto-escolhida">
+                        <img class="img-tenis-carrossel img-tenis-carrossel-2 js-img-tenis-carrossel-padrao" src="/images/image-product-2.jpg" alt="Foto 2 do tênis" data-foto-carrossel-ativa="2">
+                        <span class="foto-escolhida"></span>
+                    </div>
+                    <div class="container-foto-escolhida">
+                        <img class="img-tenis-carrossel img-tenis-carrossel-3 js-img-tenis-carrossel-padrao" src="/images/image-product-3.jpg" alt="Foto 3 do tênis" data-foto-carrossel-ativa="3">
+                        <span class="foto-escolhida"></span>
+                    </div>
+                    <div class="container-foto-escolhida">
+                        <img class="img-tenis-carrossel img-tenis-carrossel-4 js-img-tenis-carrossel-padrao" src="/images/image-product-4.jpg" alt="Foto 4 do tênis" data-foto-carrossel-ativa="4">
+                        <span class="foto-escolhida"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-foto-alternado esconder">
+                <div class="foto-alternado">
+                    <span class="container-seta container-seta-voltar js-container-seta-voltar-modal">
+                        <img src="/images/icon-previous.svg" alt="Voltar imagem">
+                    </span>
+                    <div class="container-img js-container-img-modal" data-foto-ativa="1">
+                        <img class="img-tenis img-tenis-1 js-img-tenis-modal" src="/images/image-product-1.jpg" alt="Foto 1 do tênis">
+                        <img class="img-tenis img-tenis-2 js-img-tenis-modal" src="/images/image-product-2.jpg" alt="Foto 2 do tênis">
+                        <img class="img-tenis img-tenis-3 js-img-tenis-modal" src="/images/image-product-3.jpg" alt="Foto 3 do tênis">
+                        <img class="img-tenis img-tenis-4 js-img-tenis-modal" src="/images/image-product-4.jpg" alt="Foto 4 do tênis">
+                    </div>
+                    <span class="container-seta container-seta-avancar js-container-seta-avancar-modal">
+                        <img src="/images/icon-next.svg" alt="Próxima imagem">
+                    </span>
+                    <div class="carrosel-imagens">
+                        <div class="container-foto-escolhida">
+                            <img class="img-tenis-carrossel img-tenis-carrossel-1 js-img-tenis-carrossel-modal" src="/images/image-product-1.jpg" alt="Foto 1 do tênis" data-foto-carrossel-ativa="1">
+                            <span class="foto-escolhida"></span>
+                        </div>
+                        <div class="container-foto-escolhida">
+                            <img class="img-tenis-carrossel img-tenis-carrossel-2 js-img-tenis-carrossel-modal" src="/images/image-product-2.jpg" alt="Foto 2 do tênis" data-foto-carrossel-ativa="2">
+                            <span class="foto-escolhida"></span>
+                        </div>
+                        <div class="container-foto-escolhida">
+                            <img class="img-tenis-carrossel img-tenis-carrossel-3 js-img-tenis-carrossel-modal" src="/images/image-product-3.jpg" alt="Foto 3 do tênis" data-foto-carrossel-ativa="3">
+                            <span class="foto-escolhida"></span>
+                        </div>
+                        <div class="container-foto-escolhida">
+                            <img class="img-tenis-carrossel img-tenis-carrossel-4 js-img-tenis-carrossel-modal" src="/images/image-product-4.jpg" alt="Foto 4 do tênis" data-foto-carrossel-ativa="4">
+                            <span class="foto-escolhida"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="container-descricao">
+                <div class="descricao">
+                    <div class="container-descricao-tt">
+                        <span class="nome-empresa">Sneaker Company</span>
+                        <h1>Fall Limited Edition Sneakers</h1>
+                    </div>
+                    <div>
+                        <p>
+                            These low-profile sneakers are your perfect casual wear companion. Featuring a
+                            durable rubber outer sole, they'll withstand everything the weather can offer.
+                        </p>
+                        <div class="controlador-descricao-preco">
+                            <div class="container-descricao-preco">
+                                <div class="descricao-preco">
+                                    <span class="preco-liquido js-preco-liquido">$125.00</span>
+                                    <span class="desconto-porcentagem">50%</span>
+                                </div>
+                                <span class="preco-bruto js-preco-bruto" data-preco-bruto="250.00"></span>
+                            </div>
+                            <div>
+                                <div class="container-descricao-quantidade">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="descricao-quantidade-menos js-descricao-quantidade-menos">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                                    </svg>
+                                    <span class="descricao-quantidade js-descricao-quantidade" data-quantidade="0"></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="descricao-quantidade-mais js-descricao-quantidade-mais">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                    </svg>
+                                </div>
+                                <button class="botao-comprar js-botao-comprar">
+                                    <img src="/images/icon-cart.svg" alt="Carrinho de compras">
+                                    <span>Add to cart</span>
+                                </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
