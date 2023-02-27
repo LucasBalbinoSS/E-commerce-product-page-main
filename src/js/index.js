@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    menu()
+    slider()
+    calculaPreco()
+})
+
+
+
 const menu = () => {
     const $body = document.querySelector('body')
     const $menuRwd = document.querySelector('.js-container-menu')
