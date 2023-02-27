@@ -189,3 +189,107 @@ const slider = () => {
         }
     }
 }
+
+const calculaPreco = () => {
+    const $menos = document.querySelector('.js-descricao-quantidade-menos')
+    const $quantidade = document.querySelector('.js-descricao-quantidade')
+    const $mais = document.querySelector('.js-descricao-quantidade-mais')
+    const $botaoComprar = document.querySelector('.js-botao-comprar')
+    const $precoBruto = document.querySelector('.js-preco-bruto')
+    const $precoLiquido = document.querySelector('.js-preco-liquido')
+
+    let contadorQuantidade = $quantidade.getAttribute('data-quantidade')
+    let contadorPrecoBruto = $precoBruto.getAttribute('data-preco-bruto')
+
+    console.log('entrou')
+
+
+    // logica
+    $quantidade.innerHTML = contadorQuantidade
+    precoCalcular()
+    botoesDesativar()
+    quantidadeValidar()
+
+
+    $mais.addEventListener('click', function() {
+        quantidadeAumentar()
+        botoesValidar()
+        itemAdicionar()
+    })
+
+    $menos.addEventListener('click', function() {
+        quantidadeDiminuir()
+        itemRemover()
+
+        if (contadorQuantidade == 0) {
+            botoesDesativar()
+        }
+    })
+
+
+    // funcoes
+    function quantidadeAumentar() {
+        contadorQuantidade ++
+        $quantidade.setAttribute('data-quantidade', contadorQuantidade)
+        $quantidade.innerHTML = contadorQuantidade
+    }
+
+    function quantidadeDiminuir() {
+
+        if (contadorQuantidade < 1) {
+            $menos?.classList.add('botao-desativado')
+            return
+        }
+
+        $menos.classList.remove('botao-desativado')
+        contadorQuantidade --
+        $quantidade.setAttribute('data-quantidade', contadorQuantidade)
+        $quantidade.innerHTML = contadorQuantidade
+    }
+    
+    function botoesDesativar() {
+        $menos?.classList.add('botao-desativado')
+        $botaoComprar?.classList.add('botao-desativado')
+    }
+
+    function botoesValidar() {
+
+        if ($menos?.classList.contains('botao-desativado'
+        || $botaoComprar?.classList.contains('botao-desativado'))) {
+
+            $menos?.classList.remove('botao-desativado')
+            $botaoComprar?.classList.remove('botao-desativado')
+        }
+    }
+
+    function precoCalcular() {
+        $precoBruto.innerHTML = `$${contadorPrecoBruto}`
+    }
+
+    function itemAdicionar() {
+        $precoBruto.setAttribute('data-preco-bruto', contadorPrecoBruto * contadorQuantidade)
+
+        $precoBruto.innerHTML = `$${contadorPrecoBruto * contadorQuantidade}.00`
+        $precoLiquido.innerHTML = `$${(contadorPrecoBruto * contadorQuantidade) / 2}.00`
+    }
+
+    function itemRemover() {
+        let contadorPrecoLiquido = $precoBruto.getAttribute('data-preco-bruto')
+
+        if (contadorQuantidade < 1) {
+            return
+        }
+
+        $precoBruto.setAttribute('data-preco-bruto', contadorPrecoLiquido - contadorPrecoBruto)
+
+        $precoBruto.innerHTML = `$${contadorPrecoLiquido - contadorPrecoBruto}.00`
+        $precoLiquido.innerHTML = `$${(contadorPrecoBruto * contadorQuantidade) / 2}.00`
+    }
+
+    function quantidadeValidar() {
+
+        if (contadorQuantidade == 1) {
+            return
+        }
+    }
+}
