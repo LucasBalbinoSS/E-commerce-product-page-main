@@ -293,3 +293,13 @@ const calculaPreco = () => {
         }
     }
 }
+
+
+// funcoes globais
+function mostrar($alvo) {
+    $alvo?.classList.remove('esconder')
+}
+
+function esconder($alvo) {
+    $alvo?.classList.add('esconder')
+}
