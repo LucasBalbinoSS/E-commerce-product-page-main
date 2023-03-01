@@ -544,7 +544,7 @@ p {
     }
 
     /* modal foto alternado */
-    .modal-foto-alternado {
+    .foto-alternado-modal {
         position: absolute;
         inset: 0;
         background-color: var(--pretoModal);
