@@ -213,8 +213,6 @@ const calculaPreco = () => {
     let contadorQuantidade = $quantidade.getAttribute('data-quantidade')
     let contadorPrecoBruto = $precoBruto.getAttribute('data-preco-bruto')
 
-    console.log('entrou')
-
 
     // logica
     $quantidade.innerHTML = contadorQuantidade
