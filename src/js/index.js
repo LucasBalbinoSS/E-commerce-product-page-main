@@ -107,7 +107,8 @@ const slider = () => {
                     $containerImgModal.setAttribute('data-foto-ativa', contador)
     
                     displaySetasValidar()
-                    imagemCarrosselTrocar()
+                    imagemCarrosselTrocar($containerImg)
+                    imagemCarrosselTrocar($containerImgModal)
     
                     imagemCarrosselClicadaValidar()
                     imagemCarrosselAtivar($imagemCarrossel)
@@ -127,8 +128,8 @@ const slider = () => {
             })
         }
     
-        function imagemCarrosselTrocar() {
-            $containerImg.style.transform = `translateX(-${contador - 1}00%)`
+        function imagemCarrosselTrocar($alvo) {
+            $alvo.style.transform = `translateX(-${contador - 1}00%)`
         }
     
         function imagemCarrosselLimpar($alvo) {
