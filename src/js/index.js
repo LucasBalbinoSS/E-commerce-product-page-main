@@ -176,19 +176,9 @@ const slider = () => {
         }
 
         function modalFotoAlternado() {
-            const $containerImgModal = document.querySelector('.js-container-img-modal')
-            const mobile = innerWidth < 1000
             const $modalFotoAlternado = document.querySelector('.foto-alternado-modal')
 
-            
             $containerImg.addEventListener('click', function() {
-                $containerImgModal.setAttribute('data-foto-ativa', contador)
-                console.log(contador)
-    
-                if (mobile) {
-                    return
-                }
-
                 modalAbrir()
             })
         
