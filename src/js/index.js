@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-
 const menu = () => {
     const $body = document.querySelector('body')
     const $menuRwd = document.querySelector('.js-container-menu')
