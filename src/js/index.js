@@ -19,7 +19,7 @@ const menu = () => {
         mostrar($menuRwd)
         setTimeout(() => {
             $menuRwdLista?.classList.add('ativo')
-        }, 100);
+        }, 100)
         
         $menuRwd.style.visibility = 'visible'
         $body.style.overflowY = 'hidden'
@@ -42,7 +42,7 @@ const menu = () => {
 
             setTimeout(() => {
                 $menuRwd.style.visibility = 'hidden'
-            }, 370);
+            }, 370)
         }
     }
 
