@@ -442,7 +442,7 @@ p {
         max-width: 100%;
     }
 
-    .container-seta {
+    .foto-alternado-padrao .container-seta {
         display: none;
     }
 
@@ -559,6 +559,6 @@ p {
     }
 
     .foto-alternado-modal-interno {
-        max-width: 600px;
+        max-width: 650px;
     }
 }
