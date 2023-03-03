@@ -16,6 +16,7 @@
 }
 
 body {
+    height: 100%;
     overflow-x: hidden;
     padding-bottom: 20px;
     background-color: var(--branco);
@@ -395,7 +396,6 @@ p {
     }
 
     main {
-        height: 100vh;
         margin: 0;
         padding-inline: 15px;
         padding-block-start: 40px;
@@ -431,6 +431,10 @@ p {
 
     .container-img {
         cursor: pointer;
+    }
+
+    .foto-alternado-modal .container-img {
+        cursor: default;
     }
 
     .img-tenis {
@@ -552,5 +556,9 @@ p {
 
         justify-content: center;
         align-items: center;
+    }
+
+    .foto-alternado-modal-interno {
+        max-width: 600px;
     }
 }

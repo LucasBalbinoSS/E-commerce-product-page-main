@@ -177,9 +177,12 @@ const slider = () => {
 
         function modalFotoAlternado() {
             const $modalFotoAlternado = document.querySelector('.foto-alternado-modal')
+            const $body = document.querySelector('body')
 
             $containerImg.addEventListener('click', function() {
                 modalAbrir()
+
+                $body.style.overflowY = 'hidden'
             })
         
         
