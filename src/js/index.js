@@ -182,13 +182,14 @@ const slider = () => {
             $containerImg.addEventListener('click', function() {
                 modalAbrir()
 
-                $body.style.overflowY = 'hidden'
             })
-        
-        
+            
+            
             // funcoes
             function modalAbrir() {
                 $modalFotoAlternado.classList.remove('esconder')
+
+                $body.style.overflowY = 'hidden'
                 $modalFotoAlternado.style.display = 'flex'
             }
         }
