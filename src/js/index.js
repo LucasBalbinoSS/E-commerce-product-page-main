@@ -12,7 +12,7 @@ const menu = () => {
     const $menuBtnAbrir = document.querySelector('.js-menu-abrir-svg')
 
 
-    larguraTelaTabletValidar()
+    telaTabletLarguraValidar()
 
     $menuBtnAbrir.addEventListener('click', function() {
         menuAbrir()
@@ -56,7 +56,7 @@ const menu = () => {
         }
     }
 
-    function larguraTelaTabletValidar() {
+    function telaTabletLarguraValidar() {
         addEventListener('resize', function() {
             const larguraTela = innerWidth
 
