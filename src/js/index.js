@@ -231,10 +231,7 @@ const calculaPreco = () => {
     $menos.addEventListener('click', function() {
         quantidadeDiminuir()
         itemRemover()
-
-        if (contadorQuantidade == 0) {
-            botoesDesativar()
-        }
+        botoesValidar()
     })
 
 
@@ -270,6 +267,10 @@ const calculaPreco = () => {
 
             $menos?.classList.remove('botao-desativado')
             $botaoComprar?.classList.remove('botao-desativado')
+        }
+
+        if (contadorQuantidade == 0) {
+            botoesDesativar()
         }
     }
 
