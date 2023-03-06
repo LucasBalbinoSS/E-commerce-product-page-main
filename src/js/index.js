@@ -188,7 +188,7 @@ const slider = () => {
             
             // funcoes
             function modalAbrir() {
-                $modalFotoAlternado.classList.remove('esconder')
+                mostrar($modalFotoAlternado)
 
                 $body.style.overflowY = 'hidden'
                 $modalFotoAlternado.style.display = 'flex'
