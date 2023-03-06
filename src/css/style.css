@@ -561,4 +561,16 @@ p {
     .foto-alternado-modal-interno {
         max-width: 650px;
     }
+
+    .menu-svg-fechar-modal {
+        position: absolute;
+        inset: 15px 15px auto auto;
+        z-index: 9;
+
+        border: 1px solid #ffffff3a;
+        border-radius: 5px;
+        padding-inline: 14px;
+        padding-block: 12px;
+        cursor: pointer;
+    }
 }
