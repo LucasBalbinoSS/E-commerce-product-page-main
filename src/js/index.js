@@ -87,13 +87,13 @@ const slider = () => {
         setasDisplayValidar()
         modalFotoAlternado()
 
-        $setaAvancar.addEventListener('click', function() {
+        $setaAvancar.addEventListener('click', () => {
             fotoAvancar()
             imagemCarrosselPreencher()
             setasDisplayValidar()
         })
 
-        $setaVoltar.addEventListener('click', function() {
+        $setaVoltar.addEventListener('click', () => {
             fotoVoltar()
             imagemCarrosselPreencher()
             setasDisplayValidar()
@@ -105,7 +105,7 @@ const slider = () => {
             $imagensCarrossel.forEach(function($imagemCarrossel) {
                 imagemCarrosselPreencher()
                 
-                $imagemCarrossel.addEventListener('click', function() {
+                $imagemCarrossel.addEventListener('click', () => {
                     const $containerImgModal = document.querySelector('.js-container-img-modal')
 
                     contador = $imagemCarrossel.getAttribute('data-foto-carrossel-ativa')
