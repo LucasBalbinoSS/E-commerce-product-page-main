@@ -15,13 +15,7 @@ const menu = () => {
     larguraTelaTabletValidar()
 
     $menuBtnAbrir.addEventListener('click', function() {
-        mostrar($menuRwd)
-        setTimeout(() => {
-            $menuRwdLista?.classList.add('ativo')
-        }, 100)
-        
-        $menuRwd.style.visibility = 'visible'
-        $body.style.overflowY = 'hidden'
+        menuAbrir()
     })
     
     $menuRwd.addEventListener('click', (clique) => {
@@ -30,6 +24,17 @@ const menu = () => {
 
 
     // funcoes
+    function menuAbrir() {
+        mostrar($menuRwd)
+
+        setTimeout(() => {
+            $menuRwdLista?.classList.add('ativo')
+        }, 100)
+
+        $menuRwd.style.visibility = 'visible'
+        $body.style.overflowY = 'hidden'
+    }
+
     function validaClicadoFechar(clique) {
         const $menuBtnFechar = document.querySelector('.js-menu-svg-fechar')
 
