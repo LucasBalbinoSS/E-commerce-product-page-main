@@ -180,18 +180,29 @@ const slider = () => {
         }
 
         function modalFotoAlternado() {
-            const $modalFotoAlternado = document.querySelector('.foto-alternado-modal')
             const $body = document.querySelector('body')
+            const $modalFotoAlternado = document.querySelector('.foto-alternado-modal')
+            const $modalBtnFechar = $modalFotoAlternado.querySelector('.js-menu-svg-fechar-modal')
 
             $containerImg.addEventListener('click', modalAbrir)
-            
-            
+            $modalBtnFechar.addEventListener('click', modalFechar)
+
+
             // funcoes
             function modalAbrir() {
                 mostrar($modalFotoAlternado)
 
+                // transicao
+                setTimeout(() => {
+                    $modalFotoAlternado.classList.add('modal-ativo')
+                }, 100)
+
                 $body.style.overflowY = 'hidden'
-                $modalFotoAlternado.style.display = 'flex'
+            }
+            
+            function modalFechar() {
+                $modalFotoAlternado.classList.remove('modal-ativo')
+                esconder($modalFotoAlternado)
             }
         }
     }

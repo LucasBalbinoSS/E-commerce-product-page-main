@@ -553,13 +553,23 @@ p {
         inset: 0;
         background-color: var(--pretoModal);
         z-index: 20;
-
+    }
+    
+    .foto-alternado-modal.modal-ativo {
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .foto-alternado-modal-interno {
         max-width: 650px;
+        opacity: 0;
+
+        transition: opacity 0.3s ease-in;
+    }
+
+    .foto-alternado-modal.modal-ativo .foto-alternado-modal-interno {
+        opacity: 1;
     }
 
     .menu-svg-fechar-modal {
