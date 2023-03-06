@@ -88,19 +88,19 @@ const slider = () => {
 
         // logica
         imagensCarrossel()
-        displaySetasValidar()
+        setasDisplayValidar()
         modalFotoAlternado()
 
         $setaAvancar.addEventListener('click', function() {
             fotoAvancar()
             imagemCarrosselPreencher()
-            displaySetasValidar()
+            setasDisplayValidar()
         })
 
         $setaVoltar.addEventListener('click', function() {
             fotoVoltar()
             imagemCarrosselPreencher()
-            displaySetasValidar()
+            setasDisplayValidar()
         })
 
 
@@ -116,7 +116,7 @@ const slider = () => {
                     $containerImg.setAttribute('data-foto-ativa', contador)
                     $containerImgModal.setAttribute('data-foto-ativa', contador)
     
-                    displaySetasValidar()
+                    setasDisplayValidar()
                     imagemCarrosselTrocar($containerImg)
                     imagemCarrosselTrocar($containerImgModal)
     
@@ -168,7 +168,7 @@ const slider = () => {
             $containerImg.style.transform = `translateX(-${contador - 1}00%)`
         }
     
-        function displaySetasValidar() {
+        function setasDisplayValidar() {
     
             if (contador == 1) {
                 esconder($setaVoltar)
