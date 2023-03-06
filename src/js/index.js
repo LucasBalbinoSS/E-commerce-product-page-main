@@ -19,7 +19,7 @@ const menu = () => {
     })
     
     $menuRwd.addEventListener('click', (clique) => {
-        validaClicadoFechar(clique)
+        menuFechar(clique)
     })
 
 
@@ -35,18 +35,24 @@ const menu = () => {
         $body.style.overflowY = 'hidden'
     }
 
-    function validaClicadoFechar(clique) {
+    function menuFechar(clique) {
         const $menuBtnFechar = document.querySelector('.js-menu-svg-fechar')
 
-        if (clique.target == $menuRwd ||
-            clique.target == $menuBtnFechar) {
+        clicadoValidar()
 
-            $menuRwdLista?.classList.remove('ativo')
-            $body.style.overflowY = 'visible'
 
-            setTimeout(() => {
-                $menuRwd.style.visibility = 'hidden'
-            }, 370)
+        function clicadoValidar() {
+
+            if (clique.target == $menuRwd ||
+                clique.target == $menuBtnFechar) {
+    
+                $menuRwdLista?.classList.remove('ativo')
+                $body.style.overflowY = 'visible'
+    
+                setTimeout(() => {
+                    $menuRwd.style.visibility = 'hidden'
+                }, 370)
+            }
         }
     }
 
