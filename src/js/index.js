@@ -124,8 +124,6 @@ const slider = () => {
                     imagemCarrosselAtivar($imagemCarrossel)
                 })
             })
-    
-    
         }
     
         function imagemCarrosselPreencher() {
@@ -191,7 +189,6 @@ const slider = () => {
 
             $containerImg.addEventListener('click', function() {
                 modalAbrir()
-
             })
             
             
