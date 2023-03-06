@@ -23,6 +23,7 @@ const menu = () => {
     function menuAbrir() {
         mostrar($menuRwd)
 
+        // transicao menu entrada
         setTimeout(() => {
             $menuRwdLista?.classList.add('ativo')
         }, 100)
@@ -44,7 +45,8 @@ const menu = () => {
     
                 $menuRwdLista?.classList.remove('ativo')
                 $body.style.overflowY = 'visible'
-    
+                    
+                // transicao menu saida
                 setTimeout(() => {
                     $menuRwd.style.visibility = 'hidden'
                 }, 370)
