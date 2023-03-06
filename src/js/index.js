@@ -183,9 +183,7 @@ const slider = () => {
             const $modalFotoAlternado = document.querySelector('.foto-alternado-modal')
             const $body = document.querySelector('body')
 
-            $containerImg.addEventListener('click', function() {
-                modalAbrir()
-            })
+            $containerImg.addEventListener('click', modalAbrir)
             
             
             // funcoes
