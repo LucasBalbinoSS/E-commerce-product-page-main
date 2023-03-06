@@ -216,13 +216,13 @@ const calculaPreco = () => {
     quantidadeValidar()
 
 
-    $mais.addEventListener('click', function() {
+    $mais.addEventListener('click', () => {
         quantidadeAumentar()
         botoesValidar()
         itemAdicionar()
     })
 
-    $menos.addEventListener('click', function() {
+    $menos.addEventListener('click', () => {
         quantidadeDiminuir()
         itemRemover()
         botoesValidar()
