@@ -14,13 +14,9 @@ const menu = () => {
 
     telaTabletLarguraValidar()
 
-    $menuBtnAbrir.addEventListener('click', function() {
-        menuAbrir()
-    })
+    $menuBtnAbrir.addEventListener('click', menuAbrir)
     
-    $menuRwd.addEventListener('click', (clique) => {
-        menuFechar(clique)
-    })
+    $menuRwd.addEventListener('click', (clique) => menuFechar(clique))
 
 
     // funcoes
