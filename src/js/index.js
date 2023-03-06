@@ -106,12 +106,12 @@ const slider = () => {
 
         // funcoes
         function carrosselImagens() {
-            const $containerImgModal = document.querySelector('.js-container-img-modal')
-
             $imagensCarrossel.forEach(function($imagemCarrossel) {
                 imagemCarrosselPreencher()
-    
+                
                 $imagemCarrossel.addEventListener('click', function() {
+                    const $containerImgModal = document.querySelector('.js-container-img-modal')
+
                     contador = $imagemCarrossel.getAttribute('data-foto-carrossel-ativa')
                     $containerImg.setAttribute('data-foto-ativa', contador)
                     $containerImgModal.setAttribute('data-foto-ativa', contador)
