@@ -87,7 +87,7 @@ const slider = () => {
 
 
         // logica
-        carrosselImagens()
+        imagensCarrossel()
         displaySetasValidar()
         modalFotoAlternado()
 
@@ -105,7 +105,7 @@ const slider = () => {
 
 
         // funcoes
-        function carrosselImagens() {
+        function imagensCarrossel() {
             $imagensCarrossel.forEach(function($imagemCarrossel) {
                 imagemCarrosselPreencher()
                 
