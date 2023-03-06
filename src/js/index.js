@@ -57,7 +57,7 @@ const menu = () => {
     }
 
     function larguraTelaTabletValidar() {
-        window.addEventListener('resize', function() {
+        addEventListener('resize', function() {
             const larguraTela = innerWidth
 
             if (larguraTela >= 850) {
