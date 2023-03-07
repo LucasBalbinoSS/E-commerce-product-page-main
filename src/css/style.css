@@ -355,6 +355,12 @@ p {
 }
 
 
+.img-tenis {
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+
 /* tablet */
 @media (min-width: 600px) {
     main {
@@ -474,11 +480,6 @@ p {
         display: flex;
         flex-direction: column;
         gap: 15px;
-    }
-
-    .img-tenis {
-        border-radius: 5px;
-        max-width: 100%;
     }
 
     .foto-alternado-padrao .container-seta {
