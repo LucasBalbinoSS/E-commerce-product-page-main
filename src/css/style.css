@@ -26,6 +26,7 @@ nav {
     background-color: var(--branco);
     padding-inline: 15px;
     padding-block: 20px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -139,7 +140,9 @@ main {
     border: 1px solid #ffffff3a;
     padding-inline: 14px;
     padding-block: 12px;
+
     display: flex;
+
     cursor: pointer;
     border-radius: 5px;
     position: absolute;
