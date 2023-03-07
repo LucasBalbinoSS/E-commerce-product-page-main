@@ -111,7 +111,7 @@ main {
 
 
 /* carrossel de imagens */
-.foto-alternado {
+.foto-alternado, .foto-alternado-modal-interno {
     position: relative;
     overflow-x: hidden;
 }
@@ -121,6 +121,8 @@ main {
 }
 
 .container-img {
+    cursor: pointer;
+
     display: flex;
     transition: transform 0.2s ease;
 }
@@ -307,6 +309,48 @@ p {
     cursor: default;
 }
 
+/* modal foto alternado */
+.foto-alternado-modal {
+    padding-inline: 15px;
+    position: absolute;
+    inset: 0;
+    background-color: var(--pretoModal);
+    z-index: 20;
+}
+
+.foto-alternado-modal.modal-ativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-alternado-modal-interno {
+    max-width: 650px;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in;
+}
+
+.foto-alternado-modal.modal-ativo .foto-alternado-modal-interno {
+    opacity: 1;
+}
+
+.menu-svg-fechar-modal {
+    position: absolute;
+    inset: 15px 15px auto auto;
+    z-index: 9;
+
+    border: 1px solid #ffffff3a;
+    border-radius: 5px;
+    padding-inline: 14px;
+    padding-block: 12px;
+    cursor: pointer;
+}
+
+.foto-alternado-modal .container-img {
+    cursor: default;
+}
+
 
 /* tablet */
 @media (min-width: 600px) {
@@ -429,14 +473,6 @@ p {
         gap: 15px;
     }
 
-    .container-img {
-        cursor: pointer;
-    }
-
-    .foto-alternado-modal .container-img {
-        cursor: default;
-    }
-
     .img-tenis {
         border-radius: 5px;
         max-width: 100%;
@@ -545,42 +581,5 @@ p {
         position: absolute;
         inset: 0;
         z-index: -1;
-    }
-
-    /* modal foto alternado */
-    .foto-alternado-modal {
-        position: absolute;
-        inset: 0;
-        background-color: var(--pretoModal);
-        z-index: 20;
-    }
-    
-    .foto-alternado-modal.modal-ativo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .foto-alternado-modal-interno {
-        max-width: 650px;
-        opacity: 0;
-
-        transition: opacity 0.3s ease-in;
-    }
-
-    .foto-alternado-modal.modal-ativo .foto-alternado-modal-interno {
-        opacity: 1;
-    }
-
-    .menu-svg-fechar-modal {
-        position: absolute;
-        inset: 15px 15px auto auto;
-        z-index: 9;
-
-        border: 1px solid #ffffff3a;
-        border-radius: 5px;
-        padding-inline: 14px;
-        padding-block: 12px;
-        cursor: pointer;
     }
 }
