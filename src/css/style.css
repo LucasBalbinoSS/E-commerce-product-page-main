@@ -318,6 +318,7 @@ p {
     min-width: 345px;
     border: none;
     border-radius: 5px;
+    overflow: hidden;
 
     position: fixed;
     top: 50%;
