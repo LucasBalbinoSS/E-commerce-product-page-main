@@ -77,6 +77,7 @@ const slider = () => {
         const $setaVoltar = document.querySelector(`.js-container-seta-voltar-${alvo}`)
         const $setaAvancar = document.querySelector(`.js-container-seta-avancar-${alvo}`)
         const $containerImg = document.querySelector(`.js-container-img-${alvo}`)
+        const $containerImgModal = document.querySelector('.js-container-img-modal')
 
         const $imagens = document.querySelectorAll(`.js-img-tenis-${alvo}`)
         const $imagensCarrossel = document.querySelectorAll(`.js-img-tenis-carrossel-${alvo}`)
@@ -108,8 +109,6 @@ const slider = () => {
                 imagemCarrosselPreencher()
                 
                 $imagemCarrossel.addEventListener('click', () => {
-                    const $containerImgModal = document.querySelector('.js-container-img-modal')
-
                     contador = $imagemCarrossel.getAttribute('data-foto-carrossel-ativa')
                     $containerImg.setAttribute('data-foto-ativa', contador)
                     $containerImgModal.setAttribute('data-foto-ativa', contador)
