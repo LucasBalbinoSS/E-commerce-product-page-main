@@ -182,7 +182,6 @@ const slider = () => {
         }
 
         function modalFotoAlternado() {
-            const $body = document.querySelector('body')
             const $modalFotoAlternado = document.querySelector('.js-foto-alternado-modal')
             const $modalBtnFechar = $modalFotoAlternado.querySelector('.js-menu-svg-fechar-modal')
 
