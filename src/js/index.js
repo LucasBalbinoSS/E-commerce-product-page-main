@@ -153,16 +153,20 @@ const slider = () => {
     
         function fotoAvancar() {
             $containerImg.style.transform = `translateX(-${contador}00%)`
+            $containerImgModal.style.transform = `translateX(-${contador}00%)`
     
             contador ++
             $containerImg.setAttribute('data-foto-ativa', contador)
+            $containerImgModal.setAttribute('data-foto-ativa', contador)
         }
     
         function fotoVoltar() {
             contador --
             $containerImg.setAttribute('data-foto-ativa', contador)
+            $containerImgModal.setAttribute('data-foto-ativa', contador)
     
             $containerImg.style.transform = `translateX(-${contador - 1}00%)`
+            $containerImgModal.style.transform = `translateX(-${contador - 1}00%)`
         }
     
         function setasDisplayValidar() {
