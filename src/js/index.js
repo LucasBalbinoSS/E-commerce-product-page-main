@@ -196,7 +196,7 @@ const slider = () => {
             }
             
             function modalFechar() {
-                
+                $modalFotoAlternado.close()
             }
         }
     }
