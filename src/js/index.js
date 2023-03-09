@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     menu()
     slider()
-    calculaPreco()
+    precoCalcular()
 })
 
 
@@ -206,7 +206,7 @@ const slider = () => {
     }
 }
 
-const calculaPreco = () => {
+const precoCalcular = () => {
     const $menos = document.querySelector('.js-descricao-quantidade-menos')
     const $quantidade = document.querySelector('.js-descricao-quantidade')
     const $mais = document.querySelector('.js-descricao-quantidade-mais')
