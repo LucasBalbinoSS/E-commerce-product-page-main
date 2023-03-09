@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    menu()
+    menuHamburguer()
     slider()
     precoCalcular()
 })
 
 
-const menu = () => {
+const menuHamburguer = () => {
     const $body = document.querySelector('body')
     const $menuRwd = document.querySelector('.js-container-menu')
     const $menuRwdLista = document.querySelector('.js-interno-1__lista')
