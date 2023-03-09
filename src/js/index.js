@@ -181,7 +181,9 @@ const slider = () => {
                 mostrar($setaVoltar)
             }
     
-            if (contador == $imagens.length) {esconder($setaAvancar)}
+            if (contador == $imagens.length) {
+                esconder($setaAvancar)
+            }
         }
 
         function modalFotoAlternado() {
