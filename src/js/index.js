@@ -74,13 +74,13 @@ const slider = () => {
 
 
     function padrao(alvo) {
-        const $setaVoltar = document.querySelector(`.js-container-seta-voltar-${alvo}`)
-        const $setaAvancar = document.querySelector(`.js-container-seta-avancar-${alvo}`)
+        const $setaVoltar = document.querySelector(`.js-container-seta-voltar-padrao`)
+        const $setaAvancar = document.querySelector(`.js-container-seta-avancar-padrao`)
         const $containerImg = document.querySelector(`.js-container-img-${alvo}`)
         const $containerImgModal = document.querySelector('.js-container-img-modal')
 
-        const $imagens = document.querySelectorAll(`.js-img-tenis-${alvo}`)
-        const $imagensCarrossel = document.querySelectorAll(`.js-img-tenis-carrossel-${alvo}`)
+        const $imagens = document.querySelectorAll(`.js-img-tenis-padrao`)
+        const $imagensCarrossel = document.querySelectorAll(`.js-img-tenis-carrossel-padrao`)
 
         let contador = $containerImg.getAttribute('data-foto-ativa')
 
