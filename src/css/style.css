@@ -97,6 +97,10 @@ main {
     align-items: center;
 }
 
+.carrinho-svg {
+    cursor: pointer;
+}
+
 .profile-photo {
     max-width: 30px;
     margin-inline-start: 15px;
