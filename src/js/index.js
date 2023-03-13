@@ -307,6 +307,12 @@ const precoCalcular = () => {
             return
         }
     }
+
+    function carrinhoCriar() {
+
+        if ($botaoComprar.classList.contains('botao-desativado')) {
+            return
+        }
 }
 
 
