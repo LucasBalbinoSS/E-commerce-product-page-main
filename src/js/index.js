@@ -313,6 +313,16 @@ const precoCalcular = () => {
         if ($botaoComprar.classList.contains('botao-desativado')) {
             return
         }
+
+        const $containerCarrinho = document.createElement('div')
+        const $titulo = document.createElement('h3')
+        const $conteudo = document.createElement('div')
+        const $vazio = document.createElement('span')
+
+        $containerCarrinho.appendChild($titulo)
+        $containerCarrinho.appendChild($conteudo)
+        $conteudo.appendChild($vazio)
+    }
 }
 
 
