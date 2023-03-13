@@ -237,6 +237,10 @@ const precoCalcular = () => {
         botoesValidar()
     })
 
+    $botaoComprar.addEventListener('click', () => {
+        carrinhoCriar()
+    })
+
 
     // funcoes
     function quantidadeAumentar() {
