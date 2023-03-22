@@ -207,10 +207,12 @@ const slider = () => {
 }
 
 const precoCalcular = () => {
+    const $body = document.querySelector('body')
     const $menos = document.querySelector('.js-descricao-quantidade-menos')
     const $quantidade = document.querySelector('.js-descricao-quantidade')
     const $mais = document.querySelector('.js-descricao-quantidade-mais')
     const $botaoComprar = document.querySelector('.js-botao-comprar')
+    const $carrinho = document.querySelector('.js-carrinho-svg')
     const $precoBruto = document.querySelector('.js-preco-bruto')
     const $precoLiquido = document.querySelector('.js-preco-liquido')
 
@@ -240,6 +242,7 @@ const precoCalcular = () => {
     $botaoComprar.addEventListener('click', () => {
         carrinhoCriar()
     })
+
 
 
     // funcoes
@@ -326,6 +329,12 @@ const precoCalcular = () => {
         $containerCarrinho.appendChild($titulo)
         $containerCarrinho.appendChild($conteudo)
         $conteudo.appendChild($vazio)
+        $vazio.textContent = 'Your cart is empty.'
+
+        $carrinho.addEventListener('click', () => {
+            $body.appendChild($containerCarrinho)
+            $containerCarrinho.classList.add('container-carrinho')
+        })
     }
 }
 
