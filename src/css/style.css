@@ -503,7 +503,7 @@ p {
         width: 0;
         background-color: var(--laranja);
         position: absolute;
-        bottom: -22.5px;
+        bottom: -21px;
 
         transition: all 300ms ease-in;
     }
