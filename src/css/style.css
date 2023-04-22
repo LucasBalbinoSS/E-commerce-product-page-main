@@ -458,7 +458,7 @@ p {
     main {
         margin: 0;
         padding-inline: 15px;
-        padding-block-start: 40px;
+        padding-block: 40px;
         gap: 50px;
         max-width: none;
 
