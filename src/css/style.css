@@ -54,7 +54,7 @@ main {
 .menu__interno-1 {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .interno-1__lista li, .menu-abrir-svg {
@@ -101,7 +101,7 @@ main {
 /* interno-2 */
 .menu__interno-2 {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
