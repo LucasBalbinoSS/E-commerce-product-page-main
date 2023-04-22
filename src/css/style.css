@@ -27,6 +27,7 @@ nav {
     color: var(--cor-textos);
     padding-inline: 15px;
     padding-block: 22px;
+    font-size: 25px;
 
     display: flex;
     align-items: flex-end;
@@ -82,7 +83,7 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 40px;
 
     transform: translateX(-100%);
 
@@ -91,10 +92,6 @@ main {
 
 .interno-1__lista.ativo {
     transform: translateX(0);
-}
-
-.interno-1__lista li:first-of-type {
-    margin-block-end: 12px;
 }
 
 
