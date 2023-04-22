@@ -386,6 +386,10 @@ p {
 }
 
 @media (min-width: 850px) {
+    nav {
+        font-size: 18px;
+    }
+
     .menu__interno-1 {
         flex-direction: row-reverse;
         align-items: center;
@@ -449,7 +453,6 @@ p {
         padding-inline: 0;
         position: relative;
         z-index: 11;
-        font-size: 18px;
     }
 
     main {
