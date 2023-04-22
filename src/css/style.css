@@ -26,7 +26,7 @@ nav {
     background-color: var(--branco);
     color: var(--cor-textos);
     padding-inline: 15px;
-    padding-block: 20px;
+    padding-block: 22px;
 
     display: flex;
     align-items: flex-end;
