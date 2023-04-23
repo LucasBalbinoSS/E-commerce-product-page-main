@@ -319,11 +319,12 @@ const carrinho = () => {
     $sacola.addEventListener('click', () => {
         
         if ($containerCarrinho.classList.contains('esconder')) {
-            $containerCarrinho.classList.remove('esconder')
+            mostrar($containerCarrinho)
             $containerCarrinho.style.display = 'flex'
         }
         else if ($containerCarrinho.style.display = 'flex') {
-            $containerCarrinho.style.display = 'none'
+            $containerCarrinho.style.removeProperty('display')
+            esconder($containerCarrinho)
         }
     })
 }
