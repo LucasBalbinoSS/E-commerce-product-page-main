@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuHamburguer()
     slider()
     precoCalcular()
+    carrinho()
 })
 
 
@@ -309,6 +310,15 @@ const precoCalcular = () => {
             return
         }
     }
+}
+
+const carrinho = () => {
+    $containerCarrinho = document.querySelector('.js-container-carrinho')
+    $sacola = document.querySelector('.js-carrinho-svg')
+
+    $sacola.addEventListener('click', () => {
+        $containerCarrinho.style.display = 'flex'
+    })
 }
 
 

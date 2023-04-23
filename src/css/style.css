@@ -360,7 +360,7 @@ p {
 .container-carrinho {
     background-color: transparent;
     position: fixed;
-    display: flex;
+
     justify-content: flex-end;
 
     inset: 0;
