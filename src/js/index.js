@@ -239,11 +239,6 @@ const precoCalcular = () => {
         botoesValidar()
     })
 
-    $botaoComprar.addEventListener('click', () => {
-        carrinhoCriar()
-    })
-
-
 
     // funcoes
     function quantidadeAumentar() {
@@ -313,28 +308,6 @@ const precoCalcular = () => {
         if (contadorQuantidade == 1) {
             return
         }
-    }
-
-    function carrinhoCriar() {
-
-        if ($botaoComprar.classList.contains('botao-desativado')) {
-            return
-        }
-
-        const $containerCarrinho = document.createElement('div')
-        const $titulo = document.createElement('h3')
-        const $conteudo = document.createElement('div')
-        const $vazio = document.createElement('span')
-
-        $containerCarrinho.appendChild($titulo)
-        $containerCarrinho.appendChild($conteudo)
-        $conteudo.appendChild($vazio)
-        $vazio.textContent = 'Your cart is empty.'
-
-        $carrinho.addEventListener('click', () => {
-            $body.appendChild($containerCarrinho)
-            $containerCarrinho.classList.add('container-carrinho')
-        })
     }
 }
 
