@@ -317,7 +317,14 @@ const carrinho = () => {
     $sacola = document.querySelector('.js-carrinho-svg')
 
     $sacola.addEventListener('click', () => {
-        $containerCarrinho.style.display = 'flex'
+        
+        if ($containerCarrinho.classList.contains('esconder')) {
+            $containerCarrinho.classList.remove('esconder')
+            $containerCarrinho.style.display = 'flex'
+        }
+        else if ($containerCarrinho.style.display = 'flex') {
+            $containerCarrinho.style.display = 'none'
+        }
     })
 }
 

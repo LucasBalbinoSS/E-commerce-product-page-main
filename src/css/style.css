@@ -364,7 +364,7 @@ p {
     justify-content: flex-end;
 
     inset: 0;
-    z-index: 11;
+    z-index: 9;
     padding-inline: 15px;
     padding-top: 80px;
 }
