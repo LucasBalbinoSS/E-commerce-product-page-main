@@ -315,6 +315,7 @@ const precoCalcular = () => {
 const carrinho = () => {
     const $containerCarrinho = document.querySelector('.js-container-carrinho')
     const $sacola = document.querySelector('.js-carrinho-svg')
+    const $menuBtnAbrir = document.querySelector('.js-menu-abrir-svg')
 
     const $botaoComprar = document.querySelector('.js-botao-comprar')
     const $carrinhoVazioTexto = document.querySelector('.js-carrinho-vazio')
@@ -345,6 +346,7 @@ const carrinho = () => {
     })
 
     $containerCarrinho.addEventListener('click', (clique) => carrinhoEsconder(clique))
+    $menuBtnAbrir.addEventListener('click', (clique) => carrinhoEsconder(clique))
 
 
     // funcoes
@@ -372,7 +374,7 @@ const carrinho = () => {
         function clicadoCarrinhoValidar() {
 
             if (clique.target == $containerCarrinho ||
-                clique.target == $sacola) {
+                clique.target == $sacola || clique.target == $menuBtnAbrir) {
                 $containerCarrinho.style.removeProperty('display')
                 esconder($containerCarrinho)
             }
