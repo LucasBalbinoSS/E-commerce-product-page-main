@@ -344,20 +344,41 @@ const carrinho = () => {
         itemCarrinhoExcluir()
     })
 
+    $containerCarrinho.addEventListener('click', (clique) => carrinhoEsconder(clique))
+
 
     // funcoes
     function carrinhoDisplayValidar() {
-        $sacola.addEventListener('click', () => {
+        $sacola.addEventListener('click', (clique) => {
         
             if ($containerCarrinho.classList.contains('esconder')) {
-                mostrar($containerCarrinho)
-                $containerCarrinho.style.display = 'flex'
+                carrinhoMostrar()
             }
             else if ($containerCarrinho.style.display = 'flex') {
+                carrinhoEsconder(clique)
+            }
+        })
+    }
+
+    function carrinhoMostrar() {
+        mostrar($containerCarrinho)
+        $containerCarrinho.style.display = 'flex'
+    }
+
+    function carrinhoEsconder(clique) {
+
+        clicadoCarrinhoValidar()
+
+        function clicadoCarrinhoValidar() {
+
+            if (clique.target == $containerCarrinho ||
+                clique.target == $sacola) {
                 $containerCarrinho.style.removeProperty('display')
                 esconder($containerCarrinho)
             }
-        })
+        }
+
+        
     }
 
     function itemCarrinhoAdicionar() {
