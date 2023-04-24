@@ -392,6 +392,7 @@ const carrinho = () => {
         $containerCarrinhoPreenchido.style.display = 'flex'
 
         $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
+        $carrinhoMarcador.innerHTML = $quantidade.getAttribute('data-quantidade')
         $carrinhoPrecoFinal.innerText = $precoLiquido.innerText
     }
 
