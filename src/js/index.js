@@ -326,6 +326,8 @@ const carrinho = () => {
     const $quantidade = document.querySelector('.js-descricao-quantidade')
     const $precoLiquido = document.querySelector('.js-preco-liquido')
 
+    const $itemDeletar = document.querySelector('.js-carrinho-excluir')
+
 
     carrinhoDisplayValidar()
 
@@ -341,6 +343,13 @@ const carrinho = () => {
 
         $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
         $carrinhoPrecoFinal.innerText = $precoLiquido.innerText
+    })
+
+    $itemDeletar.addEventListener('click', () => {
+        mostrar($carrinhoVazioTexto)
+        esconder($carrinhoPreenchidoBotao)
+        $containerCarrinhoPreenchido.style.removeProperty('display')
+        esconder($containerCarrinhoPreenchido)
     })
 
 
