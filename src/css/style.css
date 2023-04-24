@@ -121,6 +121,7 @@ main {
     font-size: 10px;
     font-weight: 700;
     padding-inline: 6px;
+    padding-block: 1px;
     border-radius: 5px;
     position: absolute;
     top: 0;
