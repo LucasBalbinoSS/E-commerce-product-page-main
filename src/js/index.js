@@ -313,20 +313,51 @@ const precoCalcular = () => {
 }
 
 const carrinho = () => {
-    $containerCarrinho = document.querySelector('.js-container-carrinho')
-    $sacola = document.querySelector('.js-carrinho-svg')
+    const $containerCarrinho = document.querySelector('.js-container-carrinho')
+    const $sacola = document.querySelector('.js-carrinho-svg')
 
-    $sacola.addEventListener('click', () => {
+    const $botaoComprar = document.querySelector('.js-botao-comprar')
+    const $carrinhoVazioTexto = document.querySelector('.js-carrinho-vazio')
+    const $containerCarrinhoPreenchido = document.querySelector('.js-container-carrinho-preenchido')
+    const $carrinhoPreenchidoBotao = document.querySelector('.js-carrinho-preenchido-botao')
+
+    const $carrinhoQtdItens = document.querySelector('.js-carrinho-preenchido-qtd-itens')
+    const $carrinhoPrecoFinal = document.querySelector('.js-carrinho-preenchido-preco-final')
+    const $quantidade = document.querySelector('.js-descricao-quantidade')
+    const $precoLiquido = document.querySelector('.js-preco-liquido')
+
+
+    carrinhoDisplayValidar()
+
+    $botaoComprar.addEventListener('click', () => {
         
-        if ($containerCarrinho.classList.contains('esconder')) {
-            mostrar($containerCarrinho)
-            $containerCarrinho.style.display = 'flex'
+        if ($botaoComprar.classList.contains('botao-desativado')) {
+            return
         }
-        else if ($containerCarrinho.style.display = 'flex') {
-            $containerCarrinho.style.removeProperty('display')
-            esconder($containerCarrinho)
-        }
+        esconder($carrinhoVazioTexto)
+        mostrar($carrinhoPreenchidoBotao)
+        mostrar($containerCarrinhoPreenchido)
+        $containerCarrinhoPreenchido.style.display = 'flex'
+
+        $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
+        $carrinhoPrecoFinal.innerText = $precoLiquido.innerText
     })
+
+
+    // funcoes
+    function carrinhoDisplayValidar() {
+        $sacola.addEventListener('click', () => {
+        
+            if ($containerCarrinho.classList.contains('esconder')) {
+                mostrar($containerCarrinho)
+                $containerCarrinho.style.display = 'flex'
+            }
+            else if ($containerCarrinho.style.display = 'flex') {
+                $containerCarrinho.style.removeProperty('display')
+                esconder($containerCarrinho)
+            }
+        })
+    }
 }
 
 

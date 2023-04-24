@@ -396,7 +396,6 @@ p {
 }
 
 .container-carrinho-preenchido {
-    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -434,9 +433,16 @@ p {
     cursor: pointer;
     font-size: 16px;
 
+    margin-top: 78px;
+
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.carrinho-preenchido-preco-final {
+    color: var(--cor-titulos);
+    font-weight: 700;
 }
 
 
