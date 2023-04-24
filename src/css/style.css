@@ -414,13 +414,13 @@ p {
 }
 
 .carrinho-excluir {
-    fill: var(--cor-textos);
+    fill: #dc2626;
     cursor: pointer;
     transition: fill 70ms ease-in;
 }
 
 .carrinho-excluir:hover {
-    fill: #dc2626;
+    fill: #f32929;
 }
 
 .botao-comprar-carrinho {
