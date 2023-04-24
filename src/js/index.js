@@ -321,16 +321,17 @@ const carrinho = () => {
     const $carrinhoVazioTexto = document.querySelector('.js-carrinho-vazio')
     const $containerCarrinhoPreenchido = document.querySelector('.js-container-carrinho-preenchido')
     const $carrinhoPreenchidoBotao = document.querySelector('.js-carrinho-preenchido-botao')
-
     const $carrinhoQtdItens = document.querySelector('.js-carrinho-preenchido-qtd-itens')
     const $carrinhoPrecoFinal = document.querySelector('.js-carrinho-preenchido-preco-final')
     const $quantidade = document.querySelector('.js-descricao-quantidade')
     const $precoLiquido = document.querySelector('.js-preco-liquido')
+    const $carrinhoMarcador = document.querySelector('.js-marcador-carrinho')
 
     const $itemDeletar = document.querySelector('.js-carrinho-excluir')
 
 
     carrinhoDisplayValidar()
+
 
     $botaoComprar.addEventListener('click', () => {
         
@@ -387,6 +388,7 @@ const carrinho = () => {
         esconder($carrinhoVazioTexto)
         mostrar($carrinhoPreenchidoBotao)
         mostrar($containerCarrinhoPreenchido)
+        mostrar($carrinhoMarcador)
         $containerCarrinhoPreenchido.style.display = 'flex'
 
         $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
@@ -395,6 +397,7 @@ const carrinho = () => {
 
     function itemCarrinhoExcluir() {
         mostrar($carrinhoVazioTexto)
+        esconder($carrinhoMarcador)
         esconder($carrinhoPreenchidoBotao)
         $containerCarrinhoPreenchido.style.removeProperty('display')
         esconder($containerCarrinhoPreenchido)
