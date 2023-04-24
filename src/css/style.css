@@ -100,6 +100,7 @@ main {
     display: flex;
     gap: 15px;
     align-items: center;
+    position: relative;
 }
 
 .carrinho-svg, .svg-usuario {
@@ -112,6 +113,18 @@ main {
 
 .carrinho-svg:hover, .svg-usuario:hover {
     fill: var(--cor-titulos);
+}
+
+.marcador-carrinho {
+    background-color: var(--laranja);
+    color: var(--branco);
+    font-size: 12px;
+    padding-inline: 6px;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 50%;
 }
 
 
