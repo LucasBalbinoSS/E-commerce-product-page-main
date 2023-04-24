@@ -336,20 +336,12 @@ const carrinho = () => {
         if ($botaoComprar.classList.contains('botao-desativado')) {
             return
         }
-        esconder($carrinhoVazioTexto)
-        mostrar($carrinhoPreenchidoBotao)
-        mostrar($containerCarrinhoPreenchido)
-        $containerCarrinhoPreenchido.style.display = 'flex'
 
-        $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
-        $carrinhoPrecoFinal.innerText = $precoLiquido.innerText
+        itemCarrinhoAdicionar()
     })
 
     $itemDeletar.addEventListener('click', () => {
-        mostrar($carrinhoVazioTexto)
-        esconder($carrinhoPreenchidoBotao)
-        $containerCarrinhoPreenchido.style.removeProperty('display')
-        esconder($containerCarrinhoPreenchido)
+        itemCarrinhoExcluir()
     })
 
 
@@ -366,6 +358,23 @@ const carrinho = () => {
                 esconder($containerCarrinho)
             }
         })
+    }
+
+    function itemCarrinhoAdicionar() {
+        esconder($carrinhoVazioTexto)
+        mostrar($carrinhoPreenchidoBotao)
+        mostrar($containerCarrinhoPreenchido)
+        $containerCarrinhoPreenchido.style.display = 'flex'
+
+        $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
+        $carrinhoPrecoFinal.innerText = $precoLiquido.innerText
+    }
+
+    function itemCarrinhoExcluir() {
+        mostrar($carrinhoVazioTexto)
+        esconder($carrinhoPreenchidoBotao)
+        $containerCarrinhoPreenchido.style.removeProperty('display')
+        esconder($containerCarrinhoPreenchido)
     }
 }
 
