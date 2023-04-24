@@ -118,9 +118,9 @@ main {
 .marcador-carrinho {
     background-color: var(--laranja);
     color: var(--branco);
-    font-size: 12px;
+    font-size: 10px;
     padding-inline: 6px;
-    border-radius: 50%;
+    border-radius: 5px;
     position: absolute;
     top: 0;
     right: 50%;
