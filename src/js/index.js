@@ -220,6 +220,9 @@ const precoCalcular = () => {
     let contadorQuantidade = $quantidade.getAttribute('data-quantidade')
     let contadorPrecoBruto = $precoBruto.getAttribute('data-preco-bruto')
 
+    const $avisoQuantidadeLimite = document.querySelector('.js-aviso-quantidade-limite')
+    const numeroMaximoDeProdutos = 5
+
 
     // logica
     $quantidade.innerHTML = contadorQuantidade
@@ -243,12 +246,21 @@ const precoCalcular = () => {
 
     // funcoes
     function quantidadeAumentar() {
+
+        if (contadorQuantidade == numeroMaximoDeProdutos) {
+            avisoQuantidadeLimite()
+            return
+        }
+
         contadorQuantidade ++
         $quantidade.setAttribute('data-quantidade', contadorQuantidade)
         $quantidade.innerHTML = contadorQuantidade
     }
 
     function quantidadeDiminuir() {
+
+        $avisoQuantidadeLimite.classList.remove('aviso-quantidade-limite-mostrar')
+        $avisoQuantidadeLimite.classList.add('aviso-quantidade-limite-esconder')
 
         if (contadorQuantidade < 1) {
             $menos?.classList.add('botao-desativado')
@@ -260,7 +272,21 @@ const precoCalcular = () => {
         $quantidade.setAttribute('data-quantidade', contadorQuantidade)
         $quantidade.innerHTML = contadorQuantidade
     }
-    
+
+    function avisoQuantidadeLimite() {
+        const $avisoQuantidadeLimiteNumero = document.querySelector('.js-aviso-quantidade-limite-numero')
+
+        $avisoQuantidadeLimiteNumero.innerHTML = numeroMaximoDeProdutos
+
+        $avisoQuantidadeLimite.classList.remove('aviso-quantidade-limite-esconder')
+        $avisoQuantidadeLimite.classList.add('aviso-quantidade-limite-mostrar')
+            
+        setTimeout(() => {
+            $avisoQuantidadeLimite.classList.remove('aviso-quantidade-limite-mostrar')
+            $avisoQuantidadeLimite.classList.add('aviso-quantidade-limite-esconder')
+        }, 2700);
+    }
+
     function botoesDesativar() {
         $menos?.classList.add('botao-desativado')
         $botaoComprar?.classList.add('botao-desativado')

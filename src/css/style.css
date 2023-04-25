@@ -18,7 +18,7 @@
 body {
     height: 100%;
     overflow-x: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     background-color: var(--branco);
 }
 
@@ -198,6 +198,32 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+}
+
+.aviso-quantidade-limite {
+    color: #fbbf24;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 15px;
+    user-select: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aviso-quantidade-limite-mostrar {
+    animation: avisoMostrar 250ms ease-in forwards;
+}
+
+.aviso-quantidade-limite-esconder {
+    animation: avisoEsconder 250ms ease-out forwards;
 }
 
 .nome-empresa {
@@ -277,6 +303,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
 }
 
 .descricao-quantidade {
@@ -315,6 +344,9 @@ p {
     justify-content: center;
     align-items: center;
     gap: 8px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .botao-comprar img {
@@ -534,6 +566,25 @@ p {
 }
 
 
+/* animacoes */
+@keyframes avisoMostrar {
+    to {
+        opacity: 2;
+        bottom: -29px;
+    }
+}
+
+@keyframes avisoEsconder {
+    from {
+        opacity: 2;
+        bottom: -29px;
+    }
+    to {
+        opacity: 0;
+        bottom: 0;
+    }
+}
+
 
 /* desktop */
 @media (min-width: 1000px) {
@@ -613,6 +664,18 @@ p {
         gap: 20px;
     }
 
+    .aviso-quantidade-limite {
+        bottom: 117px;
+    }
+
+    .aviso-quantidade-limite-mostrar {
+        animation: avisoMostrar 250ms ease-in forwards;
+    }
+    
+    .aviso-quantidade-limite-esconder {
+        animation: avisoEsconder 250ms ease-out forwards;
+    }
+
     h1,
     .preco-liquido {
         font-size: 40px;
@@ -685,5 +748,25 @@ p {
         position: absolute;
         inset: 0;
         z-index: -1;
+    }
+
+
+    /* animacoes desktop */
+    @keyframes avisoMostrar {
+        to {
+            bottom: 90px;
+            opacity: 2;
+        }
+    }
+
+    @keyframes avisoEsconder {
+        from {
+            bottom: 90px;
+            opacity: 2;
+        }
+        to {
+            bottom: 117px;
+            opacity: 0;
+        }
     }
 }
