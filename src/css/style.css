@@ -439,6 +439,7 @@ p {
     align-items: center;
     flex-direction: column;
     height: 231px;
+    font-weight: 300;
 }
 
 .container-carrinho-preenchido {
@@ -449,7 +450,7 @@ p {
 }
 
 .container-carrinho-preenchido img {
-    height: 60px;
+    height: 85px;
     border-radius: 5px;
 }
 
@@ -484,6 +485,12 @@ p {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.carrinho-preenchido-preco {
+    margin-block-start: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
 .carrinho-preenchido-preco-final {
