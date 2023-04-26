@@ -213,7 +213,7 @@ main {
     user-select: none;
 
     position: absolute;
-    bottom: 0;
+    bottom: 89px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -244,7 +244,7 @@ p {
 
 .container-descricao-preco {
     width: 100%;
-    margin-block-end: 15px;
+    margin-block-end: 30px;
 
     display: flex;
     justify-content: space-between;
@@ -570,18 +570,18 @@ p {
 @keyframes avisoMostrar {
     to {
         opacity: 2;
-        bottom: -29px;
+        bottom: 115px;
     }
 }
 
 @keyframes avisoEsconder {
     from {
         opacity: 2;
-        bottom: -29px;
+        bottom: 115px;
     }
     to {
         opacity: 0;
-        bottom: 0;
+        bottom: 89px;
     }
 }
 
@@ -696,6 +696,7 @@ p {
     }
 
     .container-descricao-preco {
+        margin-block-end: 15px;
         flex-direction: column;
         align-items: flex-start;
     }
