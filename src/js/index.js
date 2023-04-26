@@ -284,7 +284,7 @@ const precoCalcular = () => {
         setTimeout(() => {
             $avisoQuantidadeLimite.classList.remove('aviso-quantidade-limite-mostrar')
             $avisoQuantidadeLimite.classList.add('aviso-quantidade-limite-esconder')
-        }, 2700);
+        }, 3700);
     }
 
     function botoesDesativar() {
