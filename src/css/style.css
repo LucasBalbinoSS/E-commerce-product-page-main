@@ -188,7 +188,7 @@ main {
     padding-inline: 15px;
 }
 
-.container-descricao-tt + div {
+.container-descricao-interno {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -242,7 +242,7 @@ p {
     line-height: 1.5;
 }
 
-.container-descricao-preco {
+.descricao-preco-interno-1 {
     width: 100%;
     margin-block-end: 30px;
 
@@ -626,12 +626,7 @@ p {
         gap: 40px;
     }
 
-    .container-controlador-descricao-preco {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .container-descricao-tt + div {
+    .container-descricao-interno {
         height: 100%;
         gap: 113px;
     }
@@ -702,13 +697,13 @@ p {
         font-size: 18px;
     }
 
-    .container-descricao-preco {
+    .descricao-preco-interno-1 {
         margin-block-end: 15px;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .container-descricao-preco + div {
+    .descricao-preco-interno-2 {
         display: flex;
         gap: 20px;
     }
