@@ -353,10 +353,6 @@ p {
     width: 15px;
 }
 
-.esconder {
-    display: none;
-}
-
 .botao-desativado {
     opacity: 0.3;
     cursor: default;
@@ -496,6 +492,28 @@ p {
 .carrinho-preenchido-preco-final {
     color: var(--cor-titulos);
     font-weight: 700;
+}
+
+
+/* classes usadas no js */
+.esconder {
+    display: none;
+}
+
+.visivel {
+    visibility: visible;
+}
+
+.invisivel {
+    visibility: hidden;
+}
+
+.imovel {
+    overflow-y: hidden;
+}
+
+.movel {
+    overflow-y: visible;
 }
 
 
