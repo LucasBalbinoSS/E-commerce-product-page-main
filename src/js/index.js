@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const menuHamburguer = () => {
     const $body = document.querySelector('body')
     const $menuRwd = document.querySelector('.js-container-menu')
-    const $menuRwdLista = document.querySelector('.js-interno-1__lista')
+    const $menuRwdLista = document.querySelector('.js-interno-1-lista')
     const $menuBtnAbrir = document.querySelector('.js-menu-abrir-svg')
 
 
