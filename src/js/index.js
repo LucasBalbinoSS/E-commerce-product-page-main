@@ -13,10 +13,7 @@ const menuHamburguer = () => {
     const $menuBtnAbrir = document.querySelector('.js-menu-abrir-svg')
 
 
-    telaTabletLarguraValidar()
-
     $menuBtnAbrir.addEventListener('click', menuAbrir)
-    
     $menuRwd.addEventListener('click', (clique) => menuFechar(clique))
 
 
@@ -29,43 +26,38 @@ const menuHamburguer = () => {
             $menuRwdLista?.classList.add('ativo')
         }, 100)
 
-        $menuRwd.style.visibility = 'visible'
-        $body.style.overflowY = 'hidden'
+        $menuRwd.classList.remove('invisivel')
+        $menuRwd.classList.add('visivel')
+
+        $body.classList.add('imovel')
+        $body.classList.remove('movel')
     }
 
     function menuFechar(clique) {
         const $menuBtnFechar = document.querySelector('.js-menu-svg-fechar')
 
+
         clicadoValidar()
 
 
+        // funcoes
         function clicadoValidar() {
 
             if (clique.target == $menuRwd ||
                 clique.target == $menuBtnFechar) {
     
                 $menuRwdLista?.classList.remove('ativo')
-                $body.style.overflowY = 'visible'
-                    
+
+                $body.classList.remove('imovel')
+                $body.classList.add('movel')
+
                 // transicao menu saida
                 setTimeout(() => {
-                    $menuRwd.style.visibility = 'hidden'
+                    $menuRwd.classList.toggle('visivel')
+                    $menuRwd.classList.toggle('invisivel')
                 }, 370)
             }
         }
-    }
-
-    function telaTabletLarguraValidar() {
-        addEventListener('resize', function() {
-            const larguraTela = innerWidth
-
-            if (larguraTela >= 850) {
-                $menuRwd.style.visibility = 'visible'
-            } 
-            else {
-                $menuRwd.style.visibility = 'hidden'
-            }
-        })
     }
 }
 
