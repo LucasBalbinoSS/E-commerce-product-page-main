@@ -528,7 +528,7 @@ footer a:hover {
 }
 
 footer svg {
-    fill: #c1c2c6;
+    fill: #c1c2c6a7;
     cursor: pointer;
 
     transition: fill 150ms ease-in;
