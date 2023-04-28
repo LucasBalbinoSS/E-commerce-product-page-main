@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
     list-style: none;
     font-family: 'Kumbh Sans', sans-serif;
 }
@@ -558,9 +559,12 @@ footer svg {
     background-image: linear-gradient(225deg ,rgb(109, 89, 192),rgb(185, 53, 144),rgb(227, 63, 95),rgb(253, 213, 121));
 }
 
-
 .rodape-instagram {
     fill: var(--branco);
+}
+
+.autor:hover {
+    text-decoration: underline;
 }
 
 
