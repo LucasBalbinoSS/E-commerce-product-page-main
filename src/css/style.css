@@ -665,21 +665,18 @@ footer svg:hover {
         padding-bottom: 0;
     }
 
-    header {
-        padding-inline: 30px;
-    }
-
     nav {
         border-bottom: 1px solid #9fa5ae6f;
         padding-inline: 0;
-        position: relative;
+        inset: auto 30px auto 30px;
         z-index: 11;
     }
 
     main {
         margin: 0;
         padding-inline: 15px;
-        padding-block: 30px;
+        padding-block-start: 106px;
+        padding-block-end: 30px;
         gap: 50px;
         max-width: none;
 
