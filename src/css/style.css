@@ -679,7 +679,7 @@ footer svg:hover {
     main {
         margin: 0;
         padding-inline: 15px;
-        padding-block: 40px;
+        padding-block: 30px;
         gap: 50px;
         max-width: none;
 
@@ -821,6 +821,7 @@ footer svg:hover {
 
     footer {
         padding-inline: 30px;
+        margin-block-start: 0;
     }
 
     .container-rodape {
