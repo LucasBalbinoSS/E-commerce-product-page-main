@@ -120,9 +120,9 @@ main {
     color: var(--branco);
     font-size: 10px;
     font-weight: 700;
-    padding-inline: 6px;
+    padding-inline: 5px;
     padding-block: 1px;
-    border-radius: 5px;
+    border-radius: 100%;
     position: absolute;
     top: 0;
     right: 50%;
