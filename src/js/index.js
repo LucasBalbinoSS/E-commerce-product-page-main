@@ -331,13 +331,13 @@ const precoCalcular = () => {
 }
 
 const carrinho = () => {
-    const $containerCarrinho = document.querySelector('.js-container-carrinho')
+    const $containerCarrinho = document.querySelector('.js-carrinho')
     const $sacola = document.querySelector('.js-carrinho-svg')
     const $menuBtnAbrir = document.querySelector('.js-menu-abrir-svg')
 
     const $botaoComprar = document.querySelector('.js-botao-comprar')
     const $carrinhoVazioTexto = document.querySelector('.js-carrinho-vazio')
-    const $containerCarrinhoPreenchido = document.querySelector('.js-container-carrinho-preenchido')
+    const $containerCarrinhoPreenchido = document.querySelector('.js-carrinho-preenchido')
     const $carrinhoPreenchidoBotao = document.querySelector('.js-carrinho-preenchido-botao')
     const $carrinhoQtdItens = document.querySelector('.js-carrinho-preenchido-qtd-itens')
     const $carrinhoPrecoFinal = document.querySelector('.js-carrinho-preenchido-preco-final')
@@ -345,7 +345,7 @@ const carrinho = () => {
     const $precoLiquido = document.querySelector('.js-preco-liquido')
     const $carrinhoMarcador = document.querySelector('.js-marcador-carrinho')
 
-    const $itemDeletar = document.querySelector('.js-carrinho-excluir')
+    const $itemDeletar = document.querySelector('.js-carrinho-preenchido-excluir')
 
 
     carrinhoDisplayValidar()
