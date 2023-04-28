@@ -325,7 +325,7 @@ p {
     cursor: pointer;
 }
 
-.botao-comprar {
+.botao {
     width: 100%;
     border: none;
     background-color: var(--laranja);
@@ -340,6 +340,10 @@ p {
     -ms-user-select: none;
     user-select: none;
 
+    transition: box-shadow 400ms ease;
+}
+
+.botao-comprar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,10 +351,13 @@ p {
 
     position: relative;
     z-index: 2;
-    transition: box-shadow 400ms ease;
 }
 
-.botao-comprar:hover {
+.botao-carrinho {
+    margin-top: 78px;
+}
+
+.botao:hover {
     box-shadow: 0px 5px 30px -10px #ff7d1a, 5px 0px 30px -10px #ff7d1a;
 }
 
@@ -468,25 +475,6 @@ p {
     transform: translateY(-5px);
 }
 
-.botao-comprar-carrinho {
-    width: 100%;
-    border: none;
-    background-color: var(--laranja);
-    box-shadow: 0px 5px 15px -5px #ff7d1a, 5px 0px 15px -5px #ff7d1a;
-    color: var(--branco);
-    padding-block: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-
-    margin-top: 78px;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: box-shadow 400ms ease;
-}
-
 .botao-comprar-carrinho:hover {
     box-shadow: 0px 5px 30px -10px #ff7d1a, 5px 0px 30px -10px #ff7d1a;
 }
@@ -546,8 +534,33 @@ footer svg {
     transition: fill 150ms ease-in;
 }
 
-footer svg:hover {
+.rodape-github:hover {
     fill: #42474e;
+}
+
+.rodape-linkedin:hover {
+    fill: #0A66C2;
+}
+
+.rodape-instagram-container {
+    background-color: #c1c2c6a7;
+    padding-inline: 2px;
+    padding-block: 2px;
+    border-radius: 2px;
+
+    transition: background-color 0.5s ease;
+}
+
+.rodape-instagram-container:hover {
+    background-color: #a3a4a8a7;
+
+    transition: background-image 0.5s ease;
+    background-image: linear-gradient(225deg ,rgb(109, 89, 192),rgb(185, 53, 144),rgb(227, 63, 95),rgb(253, 213, 121));
+}
+
+
+.rodape-instagram {
+    fill: var(--branco);
 }
 
 
