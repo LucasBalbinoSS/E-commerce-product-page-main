@@ -459,13 +459,14 @@ p {
 }
 
 .carrinho-excluir {
-    fill: #dc2626;
+    color: #dc2626;
     cursor: pointer;
-    transition: fill 70ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .carrinho-excluir:hover {
-    fill: #f32929;
+    color: #f32929;
+    transform: translateY(-5px);
 }
 
 .botao-comprar-carrinho {
