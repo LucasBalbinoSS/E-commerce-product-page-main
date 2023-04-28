@@ -16,6 +16,8 @@ const menuHamburguer = () => {
     $menuBtnAbrir.addEventListener('click', menuAbrir)
     $menuRwd.addEventListener('click', (clique) => menuFechar(clique))
 
+    menuFecharResize()
+
 
     // funcoes
     function menuAbrir() {
@@ -58,6 +60,22 @@ const menuHamburguer = () => {
                 }, 370)
             }
         }
+    }
+
+    function menuFecharResize() {
+        addEventListener('resize', () => {
+            const larguraTela = innerWidth
+    
+            if (larguraTela >= 850) {
+                $menuRwdLista?.classList.remove('ativo')
+    
+                $body.classList.remove('imovel')
+                $body.classList.add('movel')
+    
+                $menuRwd.classList.remove('visivel')
+                $menuRwd.classList.add('invisivel')
+            }
+        })
     }
 }
 
