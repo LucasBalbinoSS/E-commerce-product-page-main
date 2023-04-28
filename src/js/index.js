@@ -375,7 +375,7 @@ const carrinho = () => {
             if ($containerCarrinho.classList.contains('esconder')) {
                 carrinhoMostrar()
             }
-            else if ($containerCarrinho.style.display = 'flex') {
+            else if ($containerCarrinho.classList.contains('flexivel')) {
                 carrinhoEsconder(clique)
             }
         })
@@ -383,7 +383,7 @@ const carrinho = () => {
 
     function carrinhoMostrar() {
         mostrar($containerCarrinho)
-        $containerCarrinho.style.display = 'flex'
+        $containerCarrinho.classList.add('flexivel')
     }
 
     function carrinhoEsconder(clique) {
@@ -394,7 +394,7 @@ const carrinho = () => {
 
             if (clique.target == $containerCarrinho ||
                 clique.target == $sacola || clique.target == $menuBtnAbrir) {
-                $containerCarrinho.style.removeProperty('display')
+                $containerCarrinho.classList.remove('flexivel')
                 esconder($containerCarrinho)
             }
         }
@@ -407,7 +407,7 @@ const carrinho = () => {
         mostrar($carrinhoPreenchidoBotao)
         mostrar($containerCarrinhoPreenchido)
         mostrar($carrinhoMarcador)
-        $containerCarrinhoPreenchido.style.display = 'flex'
+        $containerCarrinhoPreenchido.classList.add('flexivel')
 
         $carrinhoQtdItens.innerHTML = $quantidade.getAttribute('data-quantidade')
         $carrinhoMarcador.innerHTML = $quantidade.getAttribute('data-quantidade')
@@ -418,7 +418,7 @@ const carrinho = () => {
         mostrar($carrinhoVazioTexto)
         esconder($carrinhoMarcador)
         esconder($carrinhoPreenchidoBotao)
-        $containerCarrinhoPreenchido.style.removeProperty('display')
+        $containerCarrinhoPreenchido.classList.remove('flexivel')
         esconder($containerCarrinhoPreenchido)
     }
 }
