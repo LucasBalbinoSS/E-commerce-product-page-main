@@ -330,6 +330,7 @@ p {
     width: 100%;
     border: none;
     background-color: var(--laranja);
+    box-shadow: 0px 5px 15px -5px #ff7d1a, 5px 0px 15px -5px #ff7d1a;
     color: var(--branco);
     padding-block: 15px;
     border-radius: 5px;
@@ -347,6 +348,11 @@ p {
 
     position: relative;
     z-index: 2;
+    transition: box-shadow 400ms ease;
+}
+
+.botao-comprar:hover {
+    box-shadow: 0px 5px 30px -10px #ff7d1a, 5px 0px 30px -10px #ff7d1a;
 }
 
 .botao-comprar img {
@@ -466,6 +472,7 @@ p {
     width: 100%;
     border: none;
     background-color: var(--laranja);
+    box-shadow: 0px 5px 15px -5px #ff7d1a, 5px 0px 15px -5px #ff7d1a;
     color: var(--branco);
     padding-block: 15px;
     border-radius: 5px;
@@ -477,6 +484,11 @@ p {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: box-shadow 400ms ease;
+}
+
+.botao-comprar-carrinho:hover {
+    box-shadow: 0px 5px 30px -10px #ff7d1a, 5px 0px 30px -10px #ff7d1a;
 }
 
 .carrinho-preenchido-preco {
