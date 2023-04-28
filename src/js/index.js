@@ -70,7 +70,7 @@ const slider = () => {
         const $setaVoltar = document.querySelector(`.js-container-seta-voltar-padrao`)
         const $setaAvancar = document.querySelector(`.js-container-seta-avancar-padrao`)
         const $containerImg = document.querySelector(`.js-container-img-${alvo}`)
-        const $containerImgModal = document.querySelector('.js-container-img-modal')
+        const $containerImgModal = document.querySelector('.js-foto-alternado-container')
 
         const $imagens = document.querySelectorAll(`.js-img-tenis-padrao`)
         const $imagensCarrossel = document.querySelectorAll(`.js-img-tenis-carrossel-padrao`)
@@ -180,8 +180,8 @@ const slider = () => {
         }
 
         function modalFotoAlternado() {
-            const $modalFotoAlternado = document.querySelector('.js-foto-alternado-modal')
-            const $modalBtnFechar = $modalFotoAlternado.querySelector('.js-menu-svg-fechar-modal')
+            const $modalFotoAlternado = document.querySelector('.js-foto-alternado')
+            const $modalBtnFechar = $modalFotoAlternado.querySelector('.js-foto-alternado-fechar')
 
             $containerImg.addEventListener('click', modalAbrir)
             $modalBtnFechar.addEventListener('click', modalFechar)
