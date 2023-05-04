@@ -429,8 +429,7 @@ p {
 .carrinho-titulo {
     color: var(--cor-titulos);
     border-bottom: 1px solid #9fa5ae6f;
-    padding-inline: 15px;
-    padding-block: 22px;
+    padding: 22px;
     font-weight: 400;
 }
 
