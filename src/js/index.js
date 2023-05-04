@@ -232,6 +232,7 @@ const precoCalcular = () => {
 
     const $avisoQuantidadeLimite = document.querySelector('.js-aviso-quantidade-limite')
     const numeroMaximoDeProdutos = 5
+    let avisoMostrando = false
 
 
     // logica
@@ -258,13 +259,26 @@ const precoCalcular = () => {
     function quantidadeAumentar() {
 
         if (contadorQuantidade == numeroMaximoDeProdutos) {
-            avisoQuantidadeLimite()
+            avisoQuantidadeLimiteMostrar()
             return
         }
 
         contadorQuantidade ++
         $quantidade.setAttribute('data-quantidade', contadorQuantidade)
         $quantidade.innerHTML = contadorQuantidade
+    }
+
+    function avisoQuantidadeLimiteMostrar() {
+        if (avisoMostrando) {
+          return
+        }
+
+        avisoMostrando = true
+        avisoQuantidadeLimite()
+
+        setTimeout(function() {
+            avisoMostrando = false
+        }, 5000)
     }
 
     function quantidadeDiminuir() {
