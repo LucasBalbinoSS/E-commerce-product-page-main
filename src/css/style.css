@@ -353,7 +353,7 @@ p {
 }
 
 .botao-carrinho {
-    margin-top: 78px;
+    margin-top: 54px;
 }
 
 .botao:hover {
@@ -434,10 +434,9 @@ p {
 }
 
 .carrinho-interno {
-    padding-inline: 15px;
+    padding-inline: 22px;
     display: flex;
     justify-content: center;
-    padding-block: 22px;
     align-items: center;
     flex-direction: column;
     height: 231px;
