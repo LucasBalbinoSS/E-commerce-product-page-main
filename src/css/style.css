@@ -206,7 +206,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 4px;
     font-size: 15px;
     user-select: none;
 
@@ -214,6 +214,11 @@ main {
     bottom: 89px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.aviso-quantidade-limite-numero {
+    color: var(--cor-titulos);
+    text-decoration: underline;
 }
 
 .aviso-quantidade-limite-mostrar {
@@ -844,14 +849,14 @@ footer svg {
     /* animacoes desktop */
     @keyframes avisoMostrar {
         to {
-            bottom: 90px;
+            bottom: 85px;
             opacity: 2;
         }
     }
 
     @keyframes avisoEsconder {
         from {
-            bottom: 90px;
+            bottom: 85px;
             opacity: 2;
         }
         to {
