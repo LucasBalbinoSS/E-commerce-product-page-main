@@ -206,7 +206,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 2px;
     font-size: 15px;
     user-select: none;
 
@@ -751,6 +751,7 @@ footer svg {
 
     .aviso-quantidade-limite {
         bottom: 117px;
+        gap: 4px;
     }
 
     .aviso-quantidade-limite-mostrar {
