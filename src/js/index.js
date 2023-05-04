@@ -269,8 +269,10 @@ const precoCalcular = () => {
 
     function quantidadeDiminuir() {
 
-        $avisoQuantidadeLimite.classList.remove('aviso-quantidade-limite-mostrar')
-        $avisoQuantidadeLimite.classList.add('aviso-quantidade-limite-esconder')
+        if (contadorQuantidade == numeroMaximoDeProdutos) {
+            $avisoQuantidadeLimite.classList.remove('aviso-quantidade-limite-mostrar')
+            $avisoQuantidadeLimite.classList.add('aviso-quantidade-limite-esconder')
+        }
 
         if (contadorQuantidade < 1) {
             $menos?.classList.add('botao-desativado')
