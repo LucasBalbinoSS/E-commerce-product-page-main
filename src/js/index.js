@@ -222,7 +222,7 @@ const precoCalcular = () => {
     const $menos = document.querySelector('.js-descricao-quantidade-menos')
     const $quantidade = document.querySelector('.js-descricao-quantidade')
     const $mais = document.querySelector('.js-descricao-quantidade-mais')
-    const $botaoComprar = document.querySelector('.js-botao-comprar')
+    const $botaoComprar = document.querySelector('.js-botao-add-carrinho')
     const $carrinho = document.querySelector('.js-carrinho-svg')
     const $precoBruto = document.querySelector('.js-preco-bruto')
     const $precoLiquido = document.querySelector('.js-preco-liquido')
@@ -369,7 +369,7 @@ const carrinho = () => {
     const $sacola = document.querySelector('.js-carrinho-svg')
     const $menuBtnAbrir = document.querySelector('.js-menu-abrir-svg')
 
-    const $botaoComprar = document.querySelector('.js-botao-comprar')
+    const $botaoComprar = document.querySelector('.js-botao-add-carrinho')
     const $carrinhoVazioTexto = document.querySelector('.js-carrinho-vazio')
     const $containerCarrinhoPreenchido = document.querySelector('.js-carrinho-preenchido')
     const $carrinhoPreenchidoBotao = document.querySelector('.js-carrinho-preenchido-botao')

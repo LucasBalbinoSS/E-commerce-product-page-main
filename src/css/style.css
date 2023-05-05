@@ -322,7 +322,7 @@ p {
     transition: box-shadow 400ms ease;
 }
 
-.botao-comprar {
+.botao-add-carrinho {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,7 +340,7 @@ p {
     box-shadow: 0px 5px 30px -10px #ff7d1a, 5px 0px 30px -10px #ff7d1a;
 }
 
-.botao-comprar img {
+.botao-add-carrinho img {
     width: 15px;
 }
 
@@ -771,7 +771,7 @@ footer svg {
         width: 40%;
     }
 
-    .botao-comprar {
+    .botao-add-carrinho {
         width: 60%;
         font-size: 18px;
     }
