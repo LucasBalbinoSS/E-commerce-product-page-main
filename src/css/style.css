@@ -5,6 +5,10 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Kumbh Sans', sans-serif;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 :root {
@@ -146,10 +150,6 @@ main {
 
 .img-tenis {
     max-width: 100%;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .container-seta {
@@ -165,10 +165,6 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 9;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .container-seta-avancar {
@@ -208,7 +204,6 @@ main {
     justify-content: center;
     gap: 2px;
     font-size: 15px;
-    user-select: none;
 
     position: absolute;
     bottom: 89px;
@@ -263,10 +258,6 @@ p {
 .preco-liquido {
     color: var(--cor-titulos);
     font-size: 24px;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .desconto-porcentagem {
@@ -279,10 +270,6 @@ p {
 
     display: flex;
     align-items: center;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .preco-bruto {
@@ -290,10 +277,6 @@ p {
     text-decoration: line-through;
     color: #94a3b8;
     font-size: 14px;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .container-descricao-quantidade {
@@ -315,10 +298,6 @@ p {
     color: var(--cor-titulos);
     font-size: 16px;
     font-weight: 700;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .descricao-quantidade-menos,
@@ -339,10 +318,6 @@ p {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 
     transition: box-shadow 400ms ease;
 }
