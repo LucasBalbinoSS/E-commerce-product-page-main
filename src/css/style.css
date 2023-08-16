@@ -21,9 +21,13 @@
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     background-color: var(--branco);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav {
